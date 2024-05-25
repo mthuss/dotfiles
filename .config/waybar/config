@@ -36,7 +36,7 @@
 		],
 		"app_ids-mapping": {
 			"firefoxdeveloperedition": "firefox-developer-edition"
-		}
+		},
 	},
 
     "mpris": {
@@ -45,7 +45,7 @@
 	
         "format-paused": "{status_icon}",
         "player-icons": { 
-            "default": "▶",
+            "default": "󰐊 ",
             "mpv": "󰎇 ",
             "cmus": "󰎇 "
         },
