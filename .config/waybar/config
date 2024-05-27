@@ -63,9 +63,10 @@
     },
 
     "clock": {
-        "format": "󰥔 {:%H:%M %p 󰃭 %a %d}",
-        "format-alt": "󰥔 {:%H:%M  %b %Y}",
-        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+        "format": "󰥔  {:L%H:%M  󰃭  %d de %B}",
+        "format-alt": "󰃭  {:L%A}",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+	"locale": "pt_BR.UTF-8",
     },
 
     "network": {
@@ -90,7 +91,7 @@
     },
 
     "pulseaudio": {
-        "format": "{icon} {volume}%",
+        "format": "{icon}  {volume}%",
         "format-muted": "󰝟 {volume}%",
 	"format-bluetooth": "{icon}  {volume}%",
 	"format-source": "vol{volume}% {icon}",
