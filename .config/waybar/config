@@ -215,7 +215,6 @@
 	    "max-length": 64,
 	    "interval": 1,
 	    "exec": "~/.config/waybar/scripts/music.sh",
-	    "exec-if": "~/.config/waybar/scripts/playerctl_check.sh",
 	    "on-click": "playerctl toggle",                        //toggle pause
 	    "escape": true                                       //handle markup entities
     },
