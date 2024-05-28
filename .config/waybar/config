@@ -14,9 +14,9 @@
 
 // positions generated based on config.ctl //
 
-	"modules-left": ["custom/padd","custom/l_end","wlr/taskbar","mpris","custom/r_end","custom/l_end","hyprland/workspaces","custom/r_end","custom/padd"],
+	"modules-left": ["custom/padd","custom/l_end","wlr/taskbar","custom/r_end","custom/l_end","hyprland/workspaces","custom/r_end","custom/music","custom/padd"],
 	"modules-center": ["custom/padd","custom/l_end","clock","custom/r_end","custom/padd"],
-	"modules-right": ["custom/padd", "custom/l_end","tray","custom/separator","network","battery","pulseaudio","backlight","bluetooth","custom/r_end","custom/padd"],
+	"modules-right": ["custom/padd", "custom/l_end","tray","custom/separator","network","battery","pulseaudio","pulseaudio#microphone","backlight","bluetooth","custom/r_end","custom/padd"],
 
 
 // sourced from modules based on config.ctl //
@@ -111,8 +111,8 @@
 
     "pulseaudio#microphone": {
         "format": "{format_source}",
-        "format-source": "",
-        "format-source-muted": "",
+        "format-source": "",
+        "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
         "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
         "scroll-step": 5
@@ -142,53 +142,83 @@
         "format-icons": ["󰃞", "󰃟", "󰃠"]
     },
 
-// modules for padding //
+    "privacy": {
+        "icon-spacing": 4,
+   	"icon-size": 18,
+   	"transition-duration": 250,
+   	"modules": [
+   	    {
+   		    "type": "screenshare",
+   		    "tooltip": true,
+   		    "tooltip-icon-size": 24
+   	    },
+   	    {
+   		    "type": "audio-in",
+   		    "tooltip": true,
+   		    "tooltip-icon-size": 24
+   	    }
+   	]
+    },
+
+    // modules for padding //
 
     "custom/l_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
+	    "format": " ",
+	    "interval" : "once",
+	    "tooltip": false
     },
 
     "custom/r_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
+	    "format": " ",
+	    "interval" : "once",
+	    "tooltip": false
     },
 
     "custom/sl_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
+	    "format": " ",
+	    "interval" : "once",
+	    "tooltip": false
     },
 
     "custom/sr_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
+	    "format": " ",
+	    "interval" : "once",
+	    "tooltip": false
     },
 
     "custom/rl_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
+	    "format": " ",
+	    "interval" : "once",
+	    "tooltip": false
     },
 
     "custom/rr_end": {
-        "format": " ",
-        "interval" : "once",
-        "tooltip": false
+	    "format": " ",
+	    "interval" : "once",
+	    "tooltip": false
     },
 
     "custom/padd": {
-        "format": "  ",
-        "interval" : "once",
-        "tooltip": false
+	    "format": "  ",
+	    "interval" : "once",
+	    "tooltip": false
     },
-    
+
+    // custom utility modules //
+
     "custom/separator": {
-        "format": "│"
-    }
+	    "format": "│"
+    },
+
+    "custom/music": {
+	    "format": "{}",
+	    "max-length": 64,
+	    "interval": 1,
+	    "exec": "~/.config/waybar/scripts/music.sh",
+	    "exec-if": "~/.config/waybar/scripts/playerctl_check.sh",
+	    "on-click": "playerctl toggle",                        //toggle pause
+	    "escape": true                                       //handle markup entities
+    },
 
 }
 

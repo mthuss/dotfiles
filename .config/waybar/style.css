@@ -94,6 +94,15 @@ tooltip {
     background: @bar-bg;
 }
 
+#privacy-item {
+    color: #fb4934;
+}
+
+#pulseaudio.microphone {
+
+    color: #fb4934;
+}
+
 #cpu,
 #memory,
 #battery,
@@ -106,6 +115,7 @@ tooltip {
 #pulseaudio,
 #backlight,
 #mpris,
+#privacy,
 #custom-updates,
 #custom-wallchange,
 #custom-mode,
@@ -119,6 +129,7 @@ tooltip {
 #custom-rl_end,
 #custom-rr_end,
 #custom-separator,
+#custom-music,
 #tray {
     color: @main-color;
     background: @main-bg;
@@ -131,6 +142,24 @@ tooltip {
 #workspaces,
 #taskbar {
     padding: 0px;
+}
+/*
+#taskbar {
+    padding: 4px 8px 4px 8px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#taskbar.empty {
+    background: transparent;
+    color: transparent;
+    padding: 0px;
+    border-radius: 0px;
+    margin: 0px;
+}
+*/
+#custom-music {
+    padding: 4px 8px 4px 8px;
+    border-radius: 10px 10px 10px 10px;
 }
 
 #custom-r_end {
