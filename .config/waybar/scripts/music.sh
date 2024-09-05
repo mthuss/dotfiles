@@ -9,5 +9,5 @@ else
 	icon="󰎇"
 fi
 
-echo "$(playerctl metadata --format "$icon {{artist}} - {{title}}" 2>/dev/null)"
+echo "$(playerctl -i $IP metadata --format "$icon {{artist}} - {{title}}" 2>/dev/null)"
 

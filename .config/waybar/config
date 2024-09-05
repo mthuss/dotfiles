@@ -215,7 +215,7 @@
 	    "max-length": 64,
 	    "interval": 1,
 	    "exec": "~/.config/waybar/scripts/music.sh",
-	    "on-click": "playerctl toggle",                        //toggle pause
+	    "on-click": "playerctl play-pause",                        //toggle pause
 	    "escape": true                                       //handle markup entities
     },
 
