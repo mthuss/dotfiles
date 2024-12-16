@@ -1,4 +1,4 @@
-CONFIGS_PATH="$HOME/.scripts/monitorsetup"
+CONFIGS_PATH="$HOME/.config/hypr/scripts/monitorsetup"
 HYPR_PATH="$HOME/.config/hypr"
 
 set -e
@@ -13,8 +13,9 @@ HDMI1440p_only="󰍹  1440p screen only"
 HDMI1080p_only="󰍹  1080p screen only"
 HDMI768p_only="󰍹  768p screen only"
 laptop_only="󰍹  Laptop screen only"
+Monitor4x3="󰍹  4:3 Monitor"
 
-options="$laptop_HDMI1440p\n$laptop_HDMI1080p\n$laptop_HDMI768p\n$HDMI1440p_only\n$HDMI1080p_only\n$HDMI768p_only\n$laptop_only"
+options="$laptop_HDMI1440p\n$laptop_HDMI1080p\n$laptop_HDMI768p\n$HDMI1440p_only\n$HDMI1080p_only\n$HDMI768p_only\n$laptop_only\n$Monitor4x3"
 
 chosen="$(echo -e "$options" | rofi -lines 8 -dmenu -p "Monitors")"
 
@@ -39,4 +40,6 @@ case $chosen in
 		apply "HDMI768p_only";;
 	$laptop_only)
 		apply "laptop_only";;
+	$Monitor4x3)
+		apply "Monitor4x3";;
 esac
