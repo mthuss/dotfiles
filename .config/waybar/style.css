@@ -7,7 +7,7 @@
     min-height: 10px;
 }
 
-@import "themes/flowers.css";
+@import "themes/gruvbox.css";
 
 window#waybar {
     background: @bar-bg;
@@ -36,6 +36,7 @@ tooltip {
     transition: all 0.5s cubic-bezier(.55,-0.68,.48,1.682);
 }
 
+#workspaces button.visible,
 #workspaces button.active {
     background: @wb-act-bg;
     color: @wb-act-color;

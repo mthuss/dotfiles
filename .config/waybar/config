@@ -6,7 +6,7 @@
     "layer": "top",
     "position": "top",
     "mod": "dock",
-    "height": 35,
+    "height": 40,
     "exclusive": true,
     "passthrough": false,
     "gtk-layer-shell": true,
@@ -32,7 +32,9 @@
 		"on-click": "activate",
 		"on-click-middle": "close",
 		"ignore-list": [
-			"Alacritty"
+			"Alacritty",
+			"vesktop",
+			"WebApp-Spotify1228",
 		],
 		"app_ids-mapping": {
 			"firefoxdeveloperedition": "firefox-developer-edition"
@@ -59,7 +61,11 @@
         "all-outputs": true,
         "on-click": "activate",
         "persistent-workspaces": {
-        }
+        },
+	"format":"{icon}",
+	"format-icons": {
+		"LibreWolf": "󰈹",
+	},
     },
 
     "clock": {
