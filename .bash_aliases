@@ -33,9 +33,6 @@ alias mozconf='/usr/lib/mozc/mozc_tool --mode=config_dialog'
 #Opens code-oss with liveshare apis enabled
 alias codels='code --enable-proposed-api ms-vsliveshare.vsliveshare'
 
-#Opens tetrio
-alias tetris='cd $HOME/.tetrio-desktop-9.0.0/ && ./TETR.IO'
-
 #Runs mpv using dGPU offload
 alias nmpv='mpv --hwdec=nvdec --vo=gpu --gpu-api=vulkan --hwdec-codecs=auto'
 
@@ -46,6 +43,8 @@ alias batchpdf='for file in $(ls); do convert $file "${file%.*}".pdf; done'
 
 #takes a screenshot with area selection
 alias screenshot='slurp | grim -g - - | wl-copy'
+
+alias fac='cd $fac'
 
 #alias nmtui='nmcli device wifi rescan && echo "Scanning wifi networks" && sleep 5 && nmtui'
 
@@ -64,4 +63,3 @@ function swcodec {
 LANG=C pactl list cards | grep Name | grep bluez_card &>/dev/null  && DEVCARD=$(LANG=C pactl list cards | grep Name | grep -Eo "bluez_card.([0-9A-Fa-f]{2}[_]){5}([0-9A-Fa-f]{2})$")
 pactl send-message /card/$DEVCARD/bluez list-codecs | grep sbc_xq_552 &> /dev/null && pactl send-message "/card/$DEVCARD/bluez" switch-codec '"sbc_xq_552"' &> /dev/null && notify-send -u normal -a "Headphone Monitor" "Codec switched" "Codec switched to SBC XQ 552kbps" || notify-send -u normal -a "Headphone Monitor" "Codec not switched" "Maybe desired codec is already selected?"
 }
-
