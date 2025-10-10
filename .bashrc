@@ -92,7 +92,7 @@ fi
 
 unset use_color safe_term match_lhs sh
 
-alias cp="cp -i"                          # confirm before overwriting something
+#alias cp="cp -i"                          # confirm before overwriting something
 alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 #alias np='nano -w PKGBUILD'
@@ -143,8 +143,15 @@ set -o vi
 
 [[ -f $HOME/.bash_paths ]] && source $HOME/.bash_paths
 
+[[ -f $HOME/.suspend_olc ]] && source $HOME/.suspend_olc
+
 export GTK_IM_MODULE=fcitx5
 export QT_IM_MODULE=fcitx5
 export XMODIFIERS=@im=fcitx5
 
 HISTCONTROL=ignorespace
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export EDITOR=vim
